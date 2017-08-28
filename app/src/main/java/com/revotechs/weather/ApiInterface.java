@@ -15,5 +15,5 @@ import retrofit2.http.Query;
 
 interface ApiInterface {
     @GET("weather")
-    Call<Forecast> loadCurrentWeather(@Query("id") String id, @Query("units") String units, @Query("appid") String appId);
+    Call<Forecast> loadCurrentWeather(@Query("id") String id, @Query("units")  String units, @Query("lang") String lang, @Query("appid") String appId);
 }

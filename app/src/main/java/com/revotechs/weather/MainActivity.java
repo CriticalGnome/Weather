@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String ID_FOR_MINSK = "625144";
     public static final String APP_ID = "5fa78ed60a50f976ae9416c3795693da";
     public static final String METRIC_UNITS = "metric";
+    public static final String LANG_EN = "en";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<Forecast> call = apiService.loadCurrentWeather(ID_FOR_MINSK, METRIC_UNITS, APP_ID);
+        Call<Forecast> call = apiService.loadCurrentWeather(ID_FOR_MINSK, METRIC_UNITS, LANG_EN, APP_ID);
         call.enqueue(new Callback<Forecast>() {
             @Override
             public void onResponse(Call<Forecast> call, Response<Forecast> response) {
