@@ -69,9 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 windSpeedText.append(" m/s");
 
                 ImageView weatherImage = (ImageView) findViewById(R.id.weather_image);
-                String iconName = forecast.getWeather().get(0).getIcon();
                 Drawable icon = getDrawable(R.drawable.na);
-                switch (iconName) {
+                switch (forecast.getWeather().get(0).getIcon()) {
                     case "01d":
                         icon = getDrawable(R.drawable.image01d);
                         break;
