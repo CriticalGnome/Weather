@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="temperature_text">Temperature: </string>
+    <string name="weather_text">Sky: </string>
+    <string name="pressure_text">Pressure: </string>
+    <string name="humidity_text">Humidity: </string>
+    <string name="wind_speed_text">Wind speed: </string>
+</resources>
