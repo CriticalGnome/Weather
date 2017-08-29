@@ -15,14 +15,14 @@ class ApiClient {
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/";
     private static Retrofit retrofit = null;
 
-    static Retrofit getClient() {
+    static ApiInterface getApi() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retrofit;
+        return retrofit.create(ApiInterface.class);
     }
 
 }
